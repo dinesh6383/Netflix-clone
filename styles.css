@@ -1,0 +1,140 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    color:white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#header {
+    height: 400px;
+    position: relative;
+    background-image: url('https://image.tmdb.org/t/p/original//3lBDg3i6nn5R2NKFCJ6oKyUo2j5.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 7.4rem;
+    background-image: linear-gradient(180deg,transparent,rgba(37, 37, 37, 0.61),#111);
+}
+
+#header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#title h1{
+    font-size: 50px;
+    z-index: 10;
+}
+
+#contents{
+    position: absolute;
+    top:18%;
+    width:100%;
+    padding:0 0 0 30px;
+}
+
+#buttons{
+    display: flex;
+    margin:10px 0px 10px 0px;
+}
+
+#buttons button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttons i{
+    margin:0 10px;
+}
+
+.list button{
+    font-size: 16px;
+  color: white !important;
+  background-color: rgba(109, 109, 110, 0.7) !important;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  margin-left:10px;
+}
+
+#description{
+    max-width: 350px;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+}
+
+#originals h2, #wish-list h2{
+    padding:0px 0px 0px 30px;
+}
+
+#original-contents, #trending, #top-rated, #drama, #comedy, #kids, #new-movies{
+    padding: 5px 20px;
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+#original-contents::-webkit-scrollbar, #trending::-webkit-scrollbar, 
+#top-rated::-webkit-scrollbar, #drama::-webkit-scrollbar, #comedy::-webkit-scrollbar, #kids::-webkit-scrollbar, #new-movies::-webkit-scrollbar{
+    display: none;
+}
+#original-contents img{
+    margin-right: 10px;
+    height: 250px;
+    width: auto;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+#trending img, #top-rated img, #drama img, #comedy img, #kids img, #new-movies img{
+    margin-right:10px;
+    width:200px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+#original-contents img:hover, #trending img:hover, #top-rated img:hover, #drama img:hover, #comedy img:hover, #kids img:hover, #new-movies img:hover{
+    transform: scale(1.1);
+}
+
+.modal-body iframe{
+    width:100%;
+}
+
+.modal-body span{
+    color: #333;
+    width: 100%;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    --bs-modal-bg: #555252 !important;
+}
+
+
